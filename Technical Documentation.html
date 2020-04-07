@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<style>
+    body {
+        display: flex;
+        justify-content: space-between;
+    }
+    header {
+        color: black;
+        margin: 10px;
+        text-align: center;
+        font-size: 1.8em;
+        display: block;
+    }
+    #navbar a {
+        text-decoration: none;
+        padding: 10px 30px;
+        color: #4d4e53;
+        cursor: pointer;
+        display: block;
+    }
+    #navbar {
+        width: 100%;
+        max-height: 275px;
+        min-width: 290px;
+    }
+    #navbar li {
+        list-style: none;
+        border-top: 1px solid;
+        position: relative;
+        width: 100%;
+    }
+    #navbar ul {
+        display: block;
+        padding-left: 0px;
+        height: 207px;
+    }
+    #main-doc {
+        border-left: 2px solid;
+        padding: 20px 0px 0px 10px;
+    }
+    code {
+        display: block;
+        text-align: left;
+        white-space: pre;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 2;
+        background-color: #f7f7f7;
+        padding: 15px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+    @media only screen and (max-width: 815px){
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+        
+    }
+</style>
+
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Technical Documentation Page</title>
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>JS Documentation</header>
+            <ul>
+                <li>
+                    <a class="nav-link" href="#introduction">Introduction</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#1">1</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#2">2</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="introduction">
+                <header >Introduction</header>
+                <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment(for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+                <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operateors, control structures, and statements. Core JavaScript can be extended for a varity of purposes by supplementing it with additional objects; for example:
+                    <ul>
+                        <li>
+                            Client-side JavaScript extends the core language by supplying objects to control a browser and its Docuemnt Object Model(DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.
+                        </li>
+                        <li>
+                            Server-side JavaScript extens the core language by supplyin gobjexts relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information frm one invocation to another of application, or perform file manipulations on a server.
+                        </li>
+                    </ul>
+                </p>
+            </section>
+            <section class="main-section" id="What_you_should_already_know">
+                <header >What you should already know</header>
+                <p>The guide assumes you have the following basic background:
+                    <ul>
+                        <li>
+                            A general understanding of the Internet and the World Wide Web(WWW).
+                        </li>
+                        <li>
+                            Good working knowledge of HyperText Markup Language(HTML).
+                        </li>
+                        <li>
+                            Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.
+                        </li>
+                    </ul>
+                </p>
+            </section>
+            <section class="main-section" id="JavaScript_and_Java">
+                <header >JavaScript and Java</header>
+                <p>
+                    JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.
+                </p>
+                <p>
+                    In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.
+                </p>
+                <p>
+                    JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.
+                </p>
+            </section>
+            <section class="main-section" id="Declaring_variables">
+                <header>Declaring variables</header>
+                <p>You can declare a variable in three ways:</p>
+                <p>With the keyword var. For example
+                    <code> var x = 42.</code>
+                    <code> x = 42.</code>
+                    <code> let x = 42.</code>
+                    <code> var x = 42.</code>
+                    <code> var x = 42.</code>
+                </p>
+            </section>
+            <section class="main-section" id="1">
+                <header>1</header>
+                <p>1</p>
+            </section>
+            <section class="main-section" id="2">
+                <header>2</header>
+                <p>2</p>
+            </section>
+        </main>
+    </body>
+</html>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

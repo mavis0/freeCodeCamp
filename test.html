@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<style>
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(136, 136, 206, 0.7);
+    }
+
+    #description {
+        font-style: italic;
+        font-weight: 200;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    form {
+        background-color: rgba(28, 28, 158, 0.8);
+        padding: 2.5rem 0.625rem;
+        border-radius: 0.25rem;
+    }
+
+    .form-group{
+        margin: 0 auto 1.2rem auto;
+        padding: 0.25rem;
+    }
+
+    label{
+        display: flex;
+        align-items: center;
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 2.375rem;
+        padding: 0;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        margin-top: -17px;
+    }
+</style>
+
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    </head>
+    <body>
+        <main id="main">
+            <h1 id="title">freeCodeCamp Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve the platform</p>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label for="name-label" id="name-label">Name</label><br>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="email" id="email-label">email</label><br>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your Email" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="number" id="number-label">email</label><br>
+                    <input type="number" id="number" class="form-control" placeholder="Age" min="0" max="100"><br>
+                </div>
+
+                <div class="form-group">
+                    <p>Which option best describes your current role?</p> 
+                    <select id="dropdown" class="form-control">
+                        <option selected>Select current role</option>
+                        <option>Student</option>
+                        <option>Full Time Job</option>
+                        <option>Full Time Learner</option>
+                        <option>Perfer not to say</option>
+                        <option>other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <p>Would you recommend freeCodeCamp to a friend?</p>
+                    <input type="radio" name="recommend" value="definitely"> Definitely <br>
+                    <input type="radio" name="recommend" value="maybe"> Maybe<br>
+                    <input type="radio" name="recommend" value="notSure"> Not sure<br>
+                    <p>What would you like to see improved?(check all that apply)</p>
+                    <input type="checkbox" value="1"> Front-end Projects <br>
+                    <input type="checkbox" value="2"> Back-end Projects<br>
+                    <input type="checkbox" value="3"> Data Visualization<br>
+                    <input type="checkbox" value="4"> Challenges<br>
+                    <input type="checkbox" value="5"> Open Source Community<br>
+                    <input type="checkbox" value="6"> Gitter Help rooms<br>
+                    <input type="checkbox" value="7" checked> Wiki<br>
+                    <input type="checkbox" value="8"> Froum<br>
+                </div>
+
+                <div class="form-group">
+                    <p>Any comments or suggestions?</p>
+                    <textarea placeholder="Enter your comment here"></textarea>
+                    <br>
+                </div>
+                
+                <div class="form-group">
+                    <button id="submit">Submit</button>
+                </div>
+                <!-- <input type="submit" value="Submie"> -->
+            </form>
+
+
+        </main>
+    </body>
+</html>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+    }
+    @media screen {
+        img {
+            width: 300px;
+        }
+    }
+    .nav-link {
+        text-decoration: none;
+        color: #000;
+    }
+    #main{
+        padding-top: 50px;
+    }
+</style>
+
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Product Landing Page</title>
+    </head>
+    <body>
+        <header id="header">
+            <img src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" id="header-img" alt="original trombones logo">
+            <nav id="nav-bar">
+                <a href="#feature" class="nav-link">Feature</a>
+                <a href="#works" class="nav-link">How It Works</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </nav>
+        </header>
+        <main id="main">
+            <form id="form" action=" https://www.freecodecamp.com/email-submit">
+                <p>Handcrafted, home-made masterpieces</p>
+                <label id="email-label" for="email">
+                    <input type="email" name="email" id="email" placeholder="Enter your email address">
+                </label>
+                <label id="input-lable" for="submit">
+                    <input type="submit" id="submit" value="GET STARTED">
+                </label>
+            </form>
+            <div id="feature">
+                <section>
+                    <h2>Preminum Materials</h2>
+                    <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase</p>
+                </section>
+                <section>
+                    <h2>Fast Shipping</h2>
+                    <p>We make sure you recieve your trombones as soon as we have finished making it. We also provide free returnes if you are not satifsfied.</p>
+                </section>
+            </div>
+            <div id="works">
+                <video id="video" controls>
+                    <source type="video/mp4" src="https://youtu.be/y8Yv4pnO7qc">
+                </video>
+            </div>
+            <div id="pricing"></div>
+        </main>
+    </body>
+</html>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
