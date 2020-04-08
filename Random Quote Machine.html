@@ -32,17 +32,16 @@
     #new-quote {
         float: right;
     }
-    #tweet-quote {
+    /* #tweet-quote {
         padding: 0px;
-        padding-top: 5px;
-    }
+    } */
     i {
-        margin: 0px;
+        margin: 0px !important;
     }
     #tweet-quote, #tumblr-quote{
         display: inline-block;
-        /* padding:0px;
-        padding-top:2px; */
+        padding:0px;
+        padding-top:2px;
         text-align:center;
         font-size:1.2em;
         height:30px;
@@ -83,16 +82,16 @@
 <body>
     <div id="app" :style="styleObject">
         <div id="quote-box">
-            <section id="text"><i class="fa fa-quote-left"> </i><span id="text"></span>{{quote}}</section>
-            <section id="author">- {{author}}</section>
+            <section :style="fontStyle" id="text"><i class="fa fa-quote-left"> </i><span id="text"></span>{{quote}}</section>
+            <section :style="fontStyle" id="author">- {{author}}</section>
             <section id="control">
-                <a class="button" id="tweet-quote" title="Tweet this quote!" target="_blank">
+                <a :style="styleObject" class="button" id="tweet-quote" title="Tweet this quote!" target="_blank">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a class="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank">
+                <a :style="styleObject" class="button" id="tumblr-quote" title="Post this quote on tumblr!" target="_blank">
                     <i class="fa fa-tumblr"></i>
                 </a>
-                <button class="button" id="new-quote" @click="newQuote">New quote</button>
+                <button :style="styleObject" class="button" id="new-quote" @click="newQuote">New quote</button>
             </section>
         </div>
     </div>
@@ -107,16 +106,22 @@
             styleObject: {
                 backgroundColor: 'blue',
             },
+            fontStyle:{
+                color: 'black'
+            },
             colors: ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857"],
         },
         mounted: function(){
             this.quote = 'We become what we think about.';
             this.author = 'Earl Nightingale'
-            this.styleObject.backgroundColor = this.colors[Math.floor(Math.random() * 12)];
+            this.styleObject.backgroundColor = this.fontStyle.color = this.colors[Math.floor(Math.random() * 12)];
+            this.$http.get('https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json').then(res => {
+                console.log(res)
+            })
         },
         methods: {
             newQuote: function(){
-                this.styleObject.backgroundColor = this.colors[Math.floor(Math.random() * 12)];
+                this.styleObject.backgroundColor = this.fontStyle.color = this.colors[Math.floor(Math.random() * 12)];
             }
         }
     })
